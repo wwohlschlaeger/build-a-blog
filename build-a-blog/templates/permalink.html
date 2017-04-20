@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Build-A-Blog</h1>
+<hr>
+<ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/new">New Post</a></li>
+      <li><a href="/blog">Blogs</a></li>
+  </ul>
+<h2 class="blog-title">{{ blog.title }}</h2>
+<p class="blog-body">{{ blog.blog }}</p>
+<!-- TODO add author w/ link to author's blog -->
+<p class="blog-author">
+    written on {{ blog.created.strftime('%Y-%m-%d') }}
+</p>
+
+{% endblock %}
